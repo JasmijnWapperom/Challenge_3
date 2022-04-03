@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  --header-height: 270px;
+}
+
+html, body {
+  height: 100%;
+}
+
+#map {
+  height: calc(100% - var(--header-height));
+}
+
+.header {
+  height: var(--header-height);
+  background-image: url("../images/rideshare_feature.jpg");
+  background-position: bottom;
+}
+
+.header .search-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header .search-wrapper .search-bar {
+  width: 30%;
+  height: 55px;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.header .search-wrapper .search-bar input {
+  width: 100%;
+  height: 99%;
+  border: none;
+  font-size: 18px;
+}
+.header .search-wrapper .search-bar input:focus {
+  outline: none;
+}
+.header .search-wrapper .places-result {
+  width: 30%;
+  position: absolute;
+  height: 350px;
+  max-height: 3500px;
+  transform: translateY(60%);
+  margin-top: 20px;
+  background-color: #fff;
+  z-index: 9999;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
+}
+.header .search-wrapper .places-result.hide {
+  display: none;
+}
+.header .search-wrapper .places-result-wrapper {
+  overflow-y: auto;
+  height: 100%;
+  width: 99.6%;
+}
+.header .geo-loc-data {
+  display: flex;
+  height: 200px;
+  width: 60%;
+  background: #fff;
+  transform: translateY(-30%);
+  position: relative;
+  z-index: 999;
+  margin: 0 auto;
+  border-radius: 30px;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+.header .geo-loc-data-item {
+  flex: 1;
+}
+.header .geo-loc-data-item p {
+  color: grey;
+}
+.header .geo-loc-data-item span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.header .geo-loc-data-item:not(:last-child) {
+  border-right: 1px solid gray;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header .geo-loc-data {
+    display: flex;
+    min-height: 200px;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .header .search-wrapper .search-bar {
+    width: 70%;
+    height: 55px;
+  }
+  .header .search-wrapper .places-result {
+    width: 30%;
+  }
+  .header .search-wrapper .places-result-wrapper {
+    width: 99.6%;
+  }
+  .header .geo-loc-data {
+    display: flex;
+    min-height: 200px;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  body {
+    --header-height: 400px;
+  }
+
+  #map {
+    height: 100%;
+  }
+
+  .header .search-wrapper .search-bar {
+    width: 70%;
+    height: 55px;
+  }
+  .header .search-wrapper .places-result {
+    width: 70%;
+  }
+  .header .search-wrapper .places-result-wrapper {
+    width: 99.6%;
+  }
+  .header .geo-loc-data {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    width: 70%;
+    height: auto;
+    transform: translateY(-35%);
+  }
+  .header .geo-loc-data-item:not(:last-child) {
+    border-right: unset;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
