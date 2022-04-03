@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing planner | Space X</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<div class="header">
+    <div class="search-wrapper">
+        <div class="search-bar">
+            <input type="text" id="places-search" placeholder="Search places" />
+        </div>
+        <div class="places-result hide">
+            <div class="places-result-wrapper">
+                <ul id="places-result-list"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="geo-loc-data">
+        <div class="geo-loc-data-item">
+            <p>Location</p>
+            <span id="geo-location">-</span>
+        </div>
+        <div class="geo-loc-data-item">
+            <p>Temperature</p>
+            <span id="geo-temp">-</span>
+        </div>
+        <div class="geo-loc-data-item">
+            <p>Visibility</p>
+            <span id="geo-visibility">-</span>
+        </div>
+        <div class="geo-loc-data-item">
+            <p>Windspeed</p>
+            <span id="geo-windspeed">-</span>
+        </div>
+    </div>
+</div>
+<div id="map"></div>
+</body>
+</html>
+<script src="js/utils.js" type="module"></script>
+<script src="js/main.js" type="module"></script>
